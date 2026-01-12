@@ -21,22 +21,22 @@
                 <div class="box-droite">
                     <div class="box-inscrip">
                         <h2>Inscription</h2>
-                        <form>
+                        <form id="formInscription" method="get" action="traitement_inscrip.php">
                             <div class="zone-form">
                                 <label for="pseudo">Pseudo</label>
-                                <input type="text" id="pseudo" placeholder="Entrez votre pseudo">
+                                <input type="text" id="pseudo" placeholder="Entrez votre pseudo" name="pseudo">
                             </div>
                             <div class="zone-form">
                                 <label for="email">Adresse email</label>
-                                <input type="email" id="pseudo" placeholder="Entrez votre email">
+                                <input type="email" id="email" placeholder="Entrez votre email" name="email">
                             </div>
                             <div class="zone-form">
                                 <label for="password">Mot de passe</label>
-                                <input type="password" id="password" placeholder="Entrez votre mot de passe">
+                                <input type="password" id="password" placeholder="Entrez votre mot de passe" name="password">
                             </div>
                             <div class="zone-form">
                                 <label for="password">Vérifier le mot de passe</label>
-                                <input type="password" id="password" placeholder="Entrez votre mot de passe">
+                                <input type="password" id="verifpassword" placeholder="Vérifier votre mot de passe" name="verifpassword">
                             </div>
                             <button class="button-inscrip" type="submit">S'inscrire</button>
                         </form>
