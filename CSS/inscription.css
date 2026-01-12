@@ -25,8 +25,8 @@ par défaut sur les liens */
 
 .box {
     display: flex;
-    width: 1200px;
-    height: 600px;
+    width: 70%;
+    height: 50%;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
@@ -85,7 +85,7 @@ par défaut sur les liens */
     outline: none;
     border-color: #0c0c0c;
 }
-  
+
 .button-inscrip {
     width: 100%;
     padding: 12px;
