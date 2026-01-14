@@ -96,4 +96,15 @@ function checkPseudo() {
         .catch(err => {
             console.error(err);
         });
+
 }
+
+function checkForm() {
+    return checkPasswords() && document.getElementById('errorPseudo').textContent === "";
+}
+
+// Activer le bouton si on revient sur la page avec une erreur
+window.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('submitBtn');
+    if(btn) btn.disabled = !checkForm(); // vérifie tous les champs au chargement
+});

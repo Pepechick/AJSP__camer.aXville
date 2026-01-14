@@ -13,14 +13,14 @@ $requete->execute([$pseudo]);
 $resultat = $requete->fetch(PDO::FETCH_ASSOC);
 
 if ($resultat['nb'] > 0) {
-    header('Location: inscription.php?erreur=pseudo'.urlencode($pseudo));
+    header('Location: inscription.php?erreur=pseudo'.'&pseudo='.urlencode($pseudo).'&email='.urlencode($email));
     exit;
 } else {
     // Hash du mot de passe pour plus de sécurité
     $passHash = password_hash($pass, PASSWORD_DEFAULT);
 
-    $stmt = $bdd->prepare("INSERT INTO utilisateurs (pseudo, mot_de_passe, Email, contribution) VALUES ($pseudo, $pass, $email, 0)");
-    $stmt->execute();
+    $stmt = $bdd->prepare("INSERT INTO utilisateurs (pseudo, mot_de_passe, Email, contribution) VALUES (?, ?, ?, 0)");
+    $stmt->execute([$pseudo, $passHash, $email]);
 
     header('Location: carteetbalise.php');
     exit;

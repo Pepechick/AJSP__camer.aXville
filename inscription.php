@@ -2,8 +2,7 @@
 // Récupérer les valeurs du formulaire si redirection avec erreur
 $pseudo = $_GET['pseudo'] ?? '';
 $email = $_GET['email'] ?? '';
-$pass = $_GET['pass'] ?? '';
-$verif = $_GET['verif'] ?? '';
+$erreur = $_GET['erreur'] ?? '';
 ?>
 
 <!DOCTYPE html>
@@ -33,13 +32,18 @@ $verif = $_GET['verif'] ?? '';
                         <form id="formInscription" method="post" action="traitement_inscrip.php" onsubmit="return checkPasswords()">
                             <div class="zone-form">
                                 <label for="pseudo">Pseudo</label>
-                                <input type="text" id="pseudo" placeholder="Entrez votre pseudo" name="pseudo" required>
-                                <?php if (isset($_GET['erreur']) && $_GET['erreur'] === 'pseudo') {
-                                    echo "<p style='color:red; font-size:10px'>Ce pseudo existe déjà !</p>";} ?>
+                                <input type="text" id="pseudo" placeholder="Entrez votre pseudo" name="pseudo" value="<?= htmlspecialchars($pseudo) ?>" oninput="checkPseudo()" required>
+                                <p id="errorPseudo" style="color:red; font-size:10px;">
+                                    <?php 
+                                        if (isset($_GET['erreur']) && $_GET['erreur'] === 'pseudo') {
+                                            echo "Ce pseudo existe déjà !";
+                                        }
+                                    ?>
+                                </p>
                             </div>
                             <div class="zone-form">
                                 <label for="email">Adresse email</label>
-                                <input type="email" id="email" placeholder="Entrez votre email" name="email" oninput="checkPasswords()" required>
+                                <input type="email" id="email" placeholder="Entrez votre email" name="email" value="<?= htmlspecialchars($email) ?>" oninput="checkPasswords()" required>
                                 <p id="errorEmail" style="color:red; font-size:10px;"></p>
                             </div>
                             <div class="zone-form">
