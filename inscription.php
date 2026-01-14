@@ -32,13 +32,14 @@
                             </div>
                             <div class="zone-form">
                                 <label for="password">Mot de passe</label>
-                                <input type="password" id="password" placeholder="Entrez votre mot de passe" name="password">
+                                <input type="password" id="password" placeholder="Entrez votre mot de passe" name="password" minlength="8" maxlength="20" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$" required>
                             </div>
                             <div class="zone-form">
                                 <label for="password">Vérifier le mot de passe</label>
                                 <input type="password" id="verifpassword" placeholder="Vérifier votre mot de passe" name="verifpassword">
                             </div>
                             <button class="button-inscrip" type="submit">S'inscrire</button>
+                            <p id="error" style="color:red"></p>
                         </form>
                     </div>
                     <div class="box-connect">
