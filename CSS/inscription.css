@@ -123,25 +123,25 @@ par défaut sur les liens */
 }
 
 .btn-accueil {
-    position: fixed;      /* toujours visible à l'écran */
-    top: 20px;            /* distance du haut */
-    left: 20px;           /* distance de la gauche */
-    width: 50px;          /* largeur du bouton */
-    height: 50px;         /* hauteur du bouton */
-    border-radius: 50%;   /* rond */
-    background-color: #0c0c0c; /* couleur de fond */
-    color: white;         /* couleur de l'icône */
-    border: none;         /* pas de bordure */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* petit effet flottant */
-    font-size: 24px;      /* taille de l'icône */
-    cursor: pointer;      /* pointeur sur hover */
-    z-index: 9999;        /* au-dessus de tout le reste */
-    display: flex;        /* centrer le symbole */
+    position: fixed;  
+    top: 20px;
+    left: 20px; 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%;
+    background-color: #0c0c0c;
+    color: white;
+    border: none; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 9999;
+    display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.2s; /* effet au survol */
+    transition: transform 0.2s;
 }
 
 .btn-accueil:hover {
-    transform: scale(1.1); /* légèrement plus grand au hover */
+    transform: scale(1.1);
 }
