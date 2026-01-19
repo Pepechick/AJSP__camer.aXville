@@ -1,3 +1,8 @@
+<?php
+// Récupérer les valeurs du formulaire si redirection avec erreur
+$erreur = $_GET['erreur'];
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -24,12 +29,19 @@
                         <form>
                             <div class="zone-form">
                                 <label for="pseudo">Pseudo</label>
-                                <input type="text" id="pseudo" placeholder="Entrez votre pseudo">
+                                <input type="text" id="pseudo" placeholder="Entrez votre pseudo" name="pseudo" value="<?= htmlspecialchars($pseudo) ?>" oninput="checkPseudo()" required>
+                                <p id="errorPseudo" style="color:red; font-size:10px;">
+                                    <?php 
+                                        if (isset($_GET['erreur'])) {
+                                            echo "Pseudo incorrect";
+                                        }
+                                    ?>
+                                </p>
                             </div>
     
                             <div class="zone-form">
                                 <label for="password">Mot de passe</label>
-                                <input type="password" id="password" placeholder="Entrez votre mot de passe">
+                                <input type="password" id="password" placeholder="Entrez votre mot de passe" required>
                             </div>
                             <button class="button-connect" type="submit">Se connecter</button>
                         </form>
