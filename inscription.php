@@ -1,8 +1,8 @@
 <?php
 // Récupérer les valeurs du formulaire si redirection avec erreur
-$pseudo = $_GET['pseudo'] ?? '';
-$email = $_GET['email'] ?? '';
-$erreur = $_GET['erreur'] ?? '';
+$pseudo = $_GET['pseudo'];
+$email = $_GET['email'];
+$erreur = $_GET['erreur'];
 ?>
 
 <!DOCTYPE html>
