@@ -1,16 +1,15 @@
 <?php
     // récupère le login et mdp du formulaire en post et les stocke dans des variables php 
-	$login = $_GET['login'];
-	$mdp = $_GET['mdp'];
-
+	$pseudo = $_POST['pseudo'];
+    $email = $_POST['email'];
+    $pass = $_POST['password'];
 
 
 try {
     // Création de l'objet PDO
-    // on instancie la classe PDO. La documentation nous renseigne sur les 3 arguments à passer au constructeur
     // l'hôte de la base, l'utilisateur et le mot de passe
-    $bdd = new PDO('mysql:host=localhost;port=3306;dbname=notations;charset=utf8', 'root', 'ChuckNorris44');
-    #echo "ton mot de passe est ".$mdp."<br>";
+    $bdd = new PDO('mysql:host=localhost;port=3306;dbname=MP4-Camera;charset=utf8', 'root', 'ChuckNorris44');
+    
     
     $requeteCnx = $bdd->prepare("SELECT COUNT(*) AS cnx FROM Utilisateurs WHERE login=? AND mdp=?");
     $requeteCnx->execute ([$login, $mdp]);
@@ -19,18 +18,16 @@ try {
     if ($connexion['cnx'] == "1"){
         echo "Bonjour ".$login."<br>";
 
-        // récupération de l'id_utilisateur de la personne connecté
+        // récupération de l'id_util de la personne connecté
         $requete = $bdd->prepare("SELECT id_util FROM Utilisateurs WHERE login=? AND mdp=?");
         $requete->execute([$login, $mdp]);
         $utilisateur_connecte = $requete->fetch(PDO::FETCH_ASSOC);
-        $id = $utilisateur_connecte['id_utilisateur'];
-        header('Location: note.php?id='.$id);
-        // envoie vers la page note.php
+        $id = $utilisateur_connecte['id_util'];
+        header('Location: carteetbalise.php?id='.$id);
+        // envoie vers la page carteetbalise.php
 
 
     }else{
-        echo "<h1>Hummm... Erreur de connexion!</h1>";
-        echo "<a href='index.html'>retour page acceuil...</a>";
     }
 
   
