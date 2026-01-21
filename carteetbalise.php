@@ -2,11 +2,11 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>Page de la carte</title>
-        <link rel="stylesheet" href="CSS/carteetbalise.css">
-        <script src="JS/carteetbalise.js" defer></script>
+        <title>Carte</title>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>    
+        <link rel="stylesheet" href="CSS/carteetbalise.css">
+        <script src="JS/carteetbalise.js" defer></script>
      </head>
      <body>
         <form action="accueil.php" method="post">
@@ -28,7 +28,7 @@
             <span class="label">+ Camera</span> 
         </button>
         <div class="box_new-camera" id="box_new-camera">
-            <form action="#">
+            <form id="formCamera" method="post" action="traitement_camera.php">
                 <div class="zone-form">
                     <label for="Latitude">Latitude</label>
                     <input type="text" id="Latitude" placeholder="Entrez la Latitude" name="Latitude" required>
@@ -50,7 +50,8 @@
             </form>
         </div>
         <div class="container">
-            <div id="map"></div>
+            <div id="map">
+            </div>
         </div>
     </body>
 </html>
