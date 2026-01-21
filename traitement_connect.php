@@ -1,29 +1,33 @@
 <?php
-// récupère le login et mdp du formulaire en post et les stocke dans des variables php 
+// récupère le login et mdp du formulaire de connexion 
 $pseudo = $_POST['pseudo'];
 $pass = $_POST['password'];
 
-// Création de l'objet PDO
-// l'hôte de la base, l'utilisateur et le mot de passe
-$bdd = new PDO('mysql:host=localhost;port=3306;dbname=MP4-Camera;charset=utf8','root','ChuckNorris44');
+// connexion à la base de données
+$bdd = new PDO('mysql:host=localhost;port=3306;dbname=miniprjet4;charset=utf8','root'); #,'ChuckNorris44'
 
-$requete = $bdd->prepare("SELECT COUNT(*) AS nb FROM utilisateurs WHERE pseudo=? AND modepa=?");
-$requete->execute ([$login, $mdp]);
-$resultat = $requete->fetch(PDO::FETCH_ASSOC);
+// vérifier si le pseudo existe
+$requete_pseudo = $bdd->prepare("SELECT COUNT(*) AS ps FROM utilisateurs WHERE pseudo=?");
+$requete_pseudo->execute ([$pseudo]);
+$resultat_pseudo = $requete_pseudo->fetch(PDO::FETCH_ASSOC);
 
-if ($resultat['nb'] !== "1"){
-    header('Location: connexion.php?erreur=pseudo&pseudooumotdepasse='.$pseudo);
-    exit;
+// récupération du mot de pass hashé
+$recup_modepa = $bdd->prepare("SELECT modepa FROM utilisateurs WHERE pseudo = ?");
+$recup_modepa->execute ([$pseudo]);
+$resultat_recup = $recup_modepa->fetch(PDO::FETCH_ASSOC);
 
-    // récupération de l'id_util de la personne connecté
-    $requete = $bdd->prepare("SELECT id_util FROM utilisateurs WHERE login=? AND mdp=?");
-    $requete->execute([$login, $mdp]);
-    $utilisateur_connecte = $requete->fetch(PDO::FETCH_ASSOC);
-    $id = $utilisateur_connecte['id_util'];
-    header('Location: carteetbalise.php?id='.$id);
-    // envoie vers la page carteetbalise.php
-
-
+// verif des identifiants rentrés
+if ($resultat_pseudo['ps'] == "1"){
+    // ligne de commande permettant de verifier si le mot de pass entré dans le form de connexion correspond au mot de passe hashé
+    if (password_verify($pass, $resultat_recup['modepa'])) {
+        header('Location: carteetbalise.php');
+        exit;
+    } else {
+        header('Location: connexion.php?erreur=1');
+        exit;
+    }
 }else{
+    header('Location: connexion.php?erreur=1');
+    exit;
 }
 ?>

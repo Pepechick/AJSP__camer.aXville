@@ -1,8 +1,8 @@
 <?php
 // Récupérer les valeurs du formulaire si redirection avec erreur
-$pseudo = $_GET['pseudo'];
-$email = $_GET['email'];
-$erreur = $_GET['erreur'];
+$pseudo = isset($_GET['pseudo']) ? $_GET['pseudo'] : '';
+$email  = isset($_GET['email'])  ? $_GET['email']  : '';
+$erreur = isset($_GET['erreur']) ? $_GET['erreur'] : '';
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ $erreur = $_GET['erreur'];
                                 <input type="text" id="pseudo" placeholder="Entrez votre pseudo" name="pseudo" value="<?= htmlspecialchars($pseudo) ?>" oninput="checkPseudo()" required>
                                 <p id="errorPseudo" style="color:red; font-size:10px;">
                                     <?php 
-                                        if (isset($_GET['erreur']) && $_GET['erreur'] === 'pseudo') {
+                                        if ($erreur === 'pseudo') {
                                             echo "Ce pseudo existe déjà !";
                                         }
                                     ?>
