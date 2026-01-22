@@ -1,3 +1,8 @@
+<?php
+// permet de recuperer les éléments de la page traitement_connect.php qui ouvre aussi une session
+session_start(); 
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -45,9 +50,12 @@
                     <label for="Rue">Rue</label>
                     <input type="text" id="Rue" placeholder="Entrez la Rue" name="Rue" required>
                 </div>
-                <button class="button-form" type="button">Vider le formulaire</button>
+                <button class="button-form" type="reset">Vider le formulaire</button>
                 <button class="button-form" type="submit">Ajouter la camera</button>
             </form>
+        </div>
+        <div class="box_infos_camera" id="box_infos_camera"> 
+            <h2>Informations de la Camera</h2>
         </div>
         <div class="container">
             <div id="map">

@@ -56,6 +56,7 @@ $erreur = isset($_GET['erreur']) ? $_GET['erreur'] : '';
                                 <input type="password" id="verifpassword" placeholder="Vérifier votre mot de passe" name="verifpassword" oninput="checkPasswords()" required>
                                 <p id="errorVerif" style="color:red; font-size:10px;"></p>
                             </div>
+                            <button class="button-inscrip" type="reset">Vider le formulaire</button>
                             <button class="button-inscrip" type="submit" id="submitBtn" disabled>S'inscrire</button>
                         </form>
                     </div>

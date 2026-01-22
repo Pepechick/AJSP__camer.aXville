@@ -28,7 +28,7 @@ if ($resultat_pseudo['ps'] == "1"){
 
         // permet de partager des données entre plusieurs pages sans les exposer
         session_start(); 
-        $_SESSION['Util'] = $resultat_id['id_util'];
+        $_SESSION['util'] = $resultat_id['id_util'];
         
         header('Location: carteetbalise.php');
         exit;

@@ -42,6 +42,7 @@ $erreur = isset($_GET['erreur']);
                                 <label for="password">Mot de passe</label>
                                 <input type="password" id="password" placeholder="Entrez votre mot de passe" name="password" required>
                             </div>
+                            <button class="button-connect" type="reset">Vider le formulaire</button>
                             <button class="button-connect" type="submit">Se connecter</button>
                         </form>
                     </div>
