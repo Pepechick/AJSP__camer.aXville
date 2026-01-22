@@ -30,11 +30,13 @@ $erreur = isset($_GET['erreur']);
                             <div class="zone-form">
                                 <label for="pseudo">Pseudo</label>
                                 <input type="text" id="pseudo" placeholder="Entrez votre pseudo" name="pseudo" required>
-                                <?php 
-                                    if ($erreur) {
-                                        echo "Identifiants incorrects";
-                                    }
-                                ?>
+                                <p id="errorPseudo" style="color:red; font-size:10px;">
+                                    <?php 
+                                        if ($erreur) {
+                                            echo "Identifiants incorrects";
+                                        }
+                                    ?>
+                                </p>
                             </div>
                             <div class="zone-form">
                                 <label for="password">Mot de passe</label>

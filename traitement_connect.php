@@ -20,6 +20,16 @@ $resultat_recup = $recup_modepa->fetch(PDO::FETCH_ASSOC);
 if ($resultat_pseudo['ps'] == "1"){
     // ligne de commande permettant de verifier si le mot de pass entré dans le form de connexion correspond au mot de passe hashé
     if (password_verify($pass, $resultat_recup['modepa'])) {
+
+        // permet de récupérer l'id de l'utilisateur connecté
+        $recup_id = $bdd->prepare("SELECT id_util FROM utilisateurs WHERE pseudo = ?");
+        $recup_id->execute ([$pseudo]);
+        $resultat_id = $recup_id->fetch(PDO::FETCH_ASSOC);
+
+        // permet de partager des données entre plusieurs pages sans les exposer
+        session_start(); 
+        $_SESSION['Util'] = $resultat_id['id_util'];
+        
         header('Location: carteetbalise.php');
         exit;
     } else {
