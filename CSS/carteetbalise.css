@@ -216,3 +216,19 @@ par défaut sur les liens */
 .box_infos_camera h2 {
     text-align: center;
 }
+
+.btn-suprim {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ccc;
+    color: #0f0f0f;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn-suprim:hover {
+    background-color: #0f0f0f;
+    color: #ccc;
+}

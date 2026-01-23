@@ -58,6 +58,7 @@ session_start();
         </div>
         <div class="box_infos_camera" id="box_infos_camera"> 
             <h2>Informations de la Camera</h2>
+            <button class="btn-suprim" id="btn-suprim" type="button">Supprimer la caméra</button>
         </div>
         <div class="container">
             <div id="map">
