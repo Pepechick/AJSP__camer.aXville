@@ -77,10 +77,6 @@ p {
     color: #0c0c0c;
 }
 
-.box-connect {
-    font-family: Arial, sans-serif;
-}
-
 .button-connect {
     width: 100%;
     padding: 12px;
@@ -97,10 +93,6 @@ p {
     color: #0c0c0c;
 }
 
-.box-inscrip {
-    font-family: Arial, sans-serif;
-}
-
 .button-inscrip {
     width: 100%;
     padding: 12px;
@@ -115,6 +107,22 @@ p {
 .button-inscrip:hover {
     background-color: #0c0c0c;
     color: #ccc;
+}
+
+.button-vers-carte {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #c46f6f;
+    color: #1b0101;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.button-vers-carte:hover {
+    background-color: #1b0101;
+    color: #c46f6f;
 }
 
 .box-droite {

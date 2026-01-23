@@ -2,7 +2,7 @@ const btn = document.getElementById("btn-camera");
 const popup = document.getElementById("box_new-camera"); 
 const popup_infos = document.getElementById("box_infos_camera");
 
-// fonction qui ferme les popus
+// fonction qui ferme les popups
 function closeAllPopups() { 
     popup.style.display = "none"; 
     popup_infos.style.display = "none"; 

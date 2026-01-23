@@ -14,8 +14,8 @@ session_start();
         <script src="JS/carteetbalise.js" defer></script>
      </head>
      <body>
-        <form action="accueil.php" method="post">
-            <button class="btn-deco"> 
+        <form action="traitement_deconnect.php" method="post">
+            <button class="btn-deco" id="btn-deco" name="btn-deco"> 
                 <span class="icon"> 
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="white"> 
                         <path d="M16 13v-2H7V8l-5 4 5 4v-3h9zm3-10H8a2 2 0 0 0-2 2v4h2V5h11v14H8v-4H6v4a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/> 
