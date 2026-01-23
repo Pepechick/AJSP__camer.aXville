@@ -96,6 +96,10 @@ par défaut sur les liens */
     transition: width 0.2s ease, border-radius 0.2s ease; 
 }
 
+.hidden {
+    display: none;
+}
+
 .btn-camera:hover { 
     width: 150px;
     border-radius: 25px;

@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -26,6 +30,11 @@
                     <div class="box-inscrip">
                         <form action="inscription.php" method="post">
                             <button class="button-inscrip" type="submit">S'inscrire</button>
+                        </form>
+                    </div>
+                    <div class="box-vers-carte">
+                        <form action="carteetbalise.php" method="post">
+                            <button class="button-vers-carte" type="submit">Aller sur la carte</button>
                         </form>
                     </div>
                 </div>

@@ -24,7 +24,9 @@ session_start();
                 <span class="label">Déconnexion</span> 
             </button>
         </form>
-        <button class="btn-camera" id="btn-camera"> 
+        <button <?php 
+                    if (isset($_SESSION['util'])) {echo 'class="btn-camera"';}
+                    else {echo 'class="hidden"';}?> id="btn-camera"> 
             <span class="icon"> 
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="white"> 
                     <path d="M17 10.5V7a2 2 0 0 0-2-2H5A2 2 0 0 0 3 7v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3.5l4 4v-11l-4 4z"/> 
