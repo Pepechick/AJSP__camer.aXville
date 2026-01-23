@@ -1,3 +1,5 @@
+/*PRINCIPALE*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 body {
     background: linear-gradient(45deg, #0c0c0c, #272727);
     background-repeat: no-repeat;
@@ -15,14 +17,20 @@ par défaut sur les liens */
     box-sizing: border-box;
     text-decoration: none;
 }
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+/*CONTENAIR CENTRAL INVISIBLE PERMET DE CENTRER LES ÉLÉMENTS AU CENTRE*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .container {
     display: flex;
     justify-content: center; 
     align-items: center; 
     min-height: 100vh;   
 }
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+/*BOX VISIBLE CENTRALE QUI CONTIENT TOUT CE QUI EST VISIBLE*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .box {
     display: flex;
     width: 75%;
@@ -33,7 +41,10 @@ par défaut sur les liens */
     box-shadow: 0px 20px 30px rgb(0, 0, 0);
     background: black;
 }
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+/*BOX QUI CONTIENT LE LOGO DU SITE*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .box-gauche {
     background: linear-gradient(45deg, #0c0c0c, #272727);
     width: 60%;
@@ -41,7 +52,10 @@ par défaut sur les liens */
     justify-content: center;
     align-items: center;
 }
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+/*BOX QUI CONTIENT LE FORMULAIRE D'INSCRIP*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .box-droite {
     flex: 1;
     padding: 20px;
@@ -61,7 +75,8 @@ par défaut sur les liens */
     text-align: center;
     color: #0c0c0c;
 }
-  
+
+/*zone des formulaires ou l'on peut écrire*/
 .zone-form {
     display: flex;
     flex-direction: column;
@@ -86,6 +101,7 @@ par défaut sur les liens */
     border-color: #0c0c0c;
 }
 
+/*button de inscription*/
 .button-inscrip {
     width: 100%;
     padding: 12px;
@@ -103,10 +119,12 @@ par défaut sur les liens */
     color: #ccc;
 }
 
+/*box contenant le bouton de vers connexion.php*/
 .box-connect {
     font-family: Arial, sans-serif;
 }
 
+/*bouton de connexion vers connexion.php*/
 .button-connect {
     width: 100%;
     padding: 12px;
@@ -123,6 +141,7 @@ par défaut sur les liens */
     color: #0c0c0c;
 }
 
+/*bouton vers accueil.php*/
 .btn-accueil {
     position: fixed;  
     top: 20px;
@@ -146,3 +165,4 @@ par défaut sur les liens */
 .btn-accueil:hover {
     transform: scale(1.1);
 }
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
