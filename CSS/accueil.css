@@ -1,0 +1,132 @@
+body {
+    background: linear-gradient(45deg, #0c0c0c, #272727);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* On fait en sorte que chaque élément contienne sa marge 
+interne avec box-sizing et on retire les traits qui sont 
+par défaut sur les liens */
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;   
+}
+
+.box {
+    display: flex;
+    width: 1300px;
+    height: 620px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 20px 30px rgb(0, 0, 0);
+    background: black;
+}
+
+.box-gauche {
+    background: linear-gradient(45deg, #0c0c0c, #272727);
+    flex: 3;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+.item-box-gauche {
+    width: 100%; 
+    max-width: 600px;
+    min-width: 150px;
+    height: auto; 
+    flex: 1 1 auto;
+}
+
+.box-centre {
+    flex: 5;
+    padding: 20px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    min-width: 500px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 30px;
+    margin-top: 0;
+    text-align: left;
+    color: #0c0c0c;
+}
+
+p {
+    font-size: 24px;
+    text-align: justify;
+    color: #0c0c0c;
+}
+
+.box-connect {
+    font-family: Arial, sans-serif;
+}
+
+.button-connect {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0c0c0c;
+    color: #ccc;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.button-connect:hover {
+    background-color: #ccc;
+    color: #0c0c0c;
+}
+
+.box-inscrip {
+    font-family: Arial, sans-serif;
+}
+
+.button-inscrip {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ccc;
+    color: #0c0c0c;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.button-inscrip:hover {
+    background-color: #0c0c0c;
+    color: #ccc;
+}
+
+.box-droite {
+    background: linear-gradient(45deg, #0c0c0c, #272727);
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+}
+
+#map{    
+    width:60%;
+    height:500px;
+}
