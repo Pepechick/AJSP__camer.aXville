@@ -1,3 +1,8 @@
 # AJSP__camer.aXville
 
-Etape 1 : Lancement du serveur avec index.php qui renvoie vers accueil.php
+Auteurs : Simon Loison, Pierre Haroun, Jordan Nguyen, Armand Foucault
+Date : 23 janvier 2026
+Droits : Pas touche
+
+Permition : ajouter une caméra, se conneter, voir une camera ou plusieurs
+Ne permet pas : de supprimer (c'est un peu idiot mais c'est comme ça)
