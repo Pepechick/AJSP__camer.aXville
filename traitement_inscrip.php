@@ -5,7 +5,7 @@ $email = $_POST['email'];
 $pass = $_POST['password'];
 
 // connexion à la base de données
-$bdd = new PDO('mysql:host=localhost;port=3306;dbname=miniprjet4;charset=utf8','root'); #,'ChuckNorris44'
+$bdd = new PDO('mysql:host=localhost;port=3306;dbname=miniprjet4;charset=utf8','root','ChuckNorris44'); #,'ChuckNorris44'
 
 // vérifier si le pseudo existe déjà
 $requete = $bdd->prepare("SELECT COUNT(*) AS nb FROM utilisateurs WHERE pseudo=?");
@@ -24,7 +24,7 @@ if ($resultat['nb'] > 0) {
     $stmt = $bdd->prepare("INSERT INTO utilisateurs (pseudo, modepa, email, admins, contribution) VALUES (?, ?, ?, 'non', 0)");
     $stmt->execute([$pseudo, $passHash, $email]);
 
-    header('Location: carteetbalise.php');
+    header('Location: connexion.php');
     exit;
 }
 ?>

@@ -8,6 +8,11 @@ function closeAllPopups() {
     popup_infos.style.display = "none"; 
 }
 
+// fonction qui permet d'afficher ou non le bouton ajout camera si on est connecté ou pas.
+function apparait_bouton() {
+    btn.style.display = "none"
+}
+
 btn.addEventListener("click", () => { 
     if (popup.style.display === "flex") { 
         closeAllPopups(); 

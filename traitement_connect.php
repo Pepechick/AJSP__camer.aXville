@@ -4,7 +4,7 @@ $pseudo = $_POST['pseudo'];
 $pass = $_POST['password'];
 
 // connexion à la base de données
-$bdd = new PDO('mysql:host=localhost;port=3306;dbname=miniprjet4;charset=utf8','root'); #,'ChuckNorris44'
+$bdd = new PDO('mysql:host=localhost;port=3306;dbname=miniprjet4;charset=utf8','root','ChuckNorris44'); #,'ChuckNorris44'
 
 // vérifier si le pseudo existe
 $requete_pseudo = $bdd->prepare("SELECT COUNT(*) AS ps FROM utilisateurs WHERE pseudo=?");
