@@ -8,8 +8,15 @@ session_start();
     <head>
         <meta charset="utf-8">
         <title>Carte</title>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>    
+        <!-- LEAFLET --> 
+        <!-- Leaflet css -->	
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+        <!-- Leaflet Libraries  - Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+        <!-- JS et CSS -->          
         <link rel="stylesheet" href="CSS/carteetbalise.css">
         <script src="JS/carteetbalise.js" defer></script>
      </head>
@@ -55,10 +62,6 @@ session_start();
                 <button class="button-form" type="reset">Vider le formulaire</button>
                 <button class="button-form" type="submit">Ajouter la camera</button>
             </form>
-        </div>
-        <div class="box_infos_camera" id="box_infos_camera"> 
-            <h2>Informations de la Camera</h2>
-            <button class="btn-suprim" id="btn-suprim" type="button">Supprimer la caméra</button>
         </div>
         <div class="container">
             <div id="map">

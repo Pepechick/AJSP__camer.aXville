@@ -27,8 +27,6 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-// insertion du marqueur pour le Miroir d'eau
-
 function onMapClick(e) {
     const lat = e.latlng.lat;
     const lon = e.latlng.lng;
