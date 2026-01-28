@@ -13,11 +13,7 @@ $util = $_SESSION['util'];
 $seuil = 0.0001;
 
 // connexion à la base de données
-<<<<<<< HEAD
-$bdd = new PDO('mysql:host=localhost;port=3306;dbname=Camera;charset=utf8','root','ChuckNorris44'); #,'ChuckNorris44'
-=======
 $bdd = new PDO('mysql:host=localhost;port=3306;dbname=miniprjet4;charset=utf8','root','ChuckNorris44'); #,'ChuckNorris44'
->>>>>>> AccueilConnexionInscription
 
 // vérifier si une caméra est trop proche 
 $requete = $bdd->prepare(" SELECT COUNT(*) AS nb FROM cameras WHERE ABS(longitude - ?) < ? AND ABS(latitude - ?) < ? "); 
