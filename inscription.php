@@ -14,6 +14,7 @@ $erreur = isset($_GET['erreur']) ? $_GET['erreur'] : '';
         <script src="JS/inscription.js" defer></script>
      </head>
      <body>
+        <?php // button et form permttant de rediriger l'utilisateur vers l'accueil.php?>
         <form action="accueil.php" method="post">
             <button class="btn-accueil">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
@@ -21,12 +22,17 @@ $erreur = isset($_GET['erreur']) ? $_GET['erreur'] : '';
                 </svg>
             </button>
         </form>
+        <?php // container est le div principal invisble qui contient tout?>
         <div class="container">
+            <?php // box est le div que l'on voit au centre de la page?>
             <div class="box">
+                <?php // box_gauche est le div de gauche qui contient le logo du site?>
                 <div class="box-gauche">
                     <img src="IMG/logo-site.png" width="600" height="600" alt="Logo Naocam" class="item-box-gauche">
                 </div>
+                <?php // box_droite est le div de droite qui contient le formulaire d'inscription et plusieurs boutons?>
                 <div class="box-droite">
+                    <?php // box_inscrip est le div qui contient le formulaire d'inscrip?>
                     <div class="box-inscrip">
                         <h2>Inscription</h2>
                         <form id="formInscription" method="post" action="traitement_inscrip.php" onsubmit="return checkPasswords()">
@@ -34,6 +40,8 @@ $erreur = isset($_GET['erreur']) ? $_GET['erreur'] : '';
                                 <label for="pseudo">Pseudo</label>
                                 <input type="text" id="pseudo" placeholder="Entrez votre pseudo" name="pseudo" value="<?= htmlspecialchars($pseudo) ?>" oninput="checkPseudo()" required>
                                 <p id="errorPseudo" style="color:red; font-size:10px;">
+                                    <?php // code php permettant de dire à l'utilisateur que son pseudo est déjà utilisé 
+                                    // après être passé par le fichier traitement_inscription.php?>
                                     <?php 
                                         if ($erreur === 'pseudo') {
                                             echo "Ce pseudo existe déjà !";
@@ -56,10 +64,12 @@ $erreur = isset($_GET['erreur']) ? $_GET['erreur'] : '';
                                 <input type="password" id="verifpassword" placeholder="Vérifier votre mot de passe" name="verifpassword" oninput="checkPasswords()" required>
                                 <p id="errorVerif" style="color:red; font-size:10px;"></p>
                             </div>
+                            <?php // button inscrip et supprimer/vider le formulaire?>
                             <button class="button-inscrip" type="reset">Vider le formulaire</button>
                             <button class="button-inscrip" type="submit" id="submitBtn" disabled>S'inscrire</button>
                         </form>
                     </div>
+                    <?php // box_connect contient le formulaire permttant de partir vers la page connexion?>
                     <div class="box-connect">
                         <form action="connexion.php" method="post">
                             <button class="button-connect" type="submit">Se connecter</button>

@@ -1,3 +1,5 @@
+/*A PEUT PRES LE MEME CSS POUR CHAQUE FICHIER*/
+
 body {
     background: linear-gradient(45deg, #0c0c0c, #272727);
     background-repeat: no-repeat;
@@ -25,8 +27,8 @@ par défaut sur les liens */
 
 .box {
     display: flex;
-    width: 1300px;
-    height: 620px;
+    width: 1600px;
+    height: 800px;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
@@ -71,16 +73,6 @@ h1 {
     color: #0c0c0c;
 }
 
-p {
-    font-size: 24px;
-    text-align: justify;
-    color: #0c0c0c;
-}
-
-.box-connect {
-    font-family: Arial, sans-serif;
-}
-
 .button-connect {
     width: 100%;
     padding: 12px;
@@ -95,10 +87,6 @@ p {
 .button-connect:hover {
     background-color: #ccc;
     color: #0c0c0c;
-}
-
-.box-inscrip {
-    font-family: Arial, sans-serif;
 }
 
 .button-inscrip {
@@ -117,6 +105,22 @@ p {
     color: #ccc;
 }
 
+.button-vers-carte {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #c46f6f;
+    color: #1b0101;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.button-vers-carte:hover {
+    background-color: #1b0101;
+    color: #c46f6f;
+}
+
 .box-droite {
     background: linear-gradient(45deg, #0c0c0c, #272727);
     flex: 2;
@@ -124,9 +128,4 @@ p {
     justify-content: center;
     align-items: center;
     min-width: 200px;
-}
-
-#map{    
-    width:60%;
-    height:500px;
 }
